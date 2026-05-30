@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helena e Rafael</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Cormorant+SC:wght@300;400;500;600&family=Italianno&display=swap" rel="stylesheet">
+
+    <!-- CSS externo -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ============ NAVBAR ============ -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#programacao">Programação</a></li>
+            <li><a href="#como-chegar">Como Chegar</a></li>
+            <li><a href="#hospedagem">Hospedagem</a></li>
+            <li><a href="#dicas">Dicas</a></li>
+            <li><a href="#presentes">Presentes</a></li>
+        </ul>
+    </nav>
+
+    <!-- ============ HERO - PARTE 1 (imagem de fundo) ============ -->
+    <section class="hero-banner" id="home">
+        <div class="hero-banner-overlay">
+            <h1>Helena <br> e <br> Rafael</h1>
+            <p class="date">05 . dezembro . 2026</p>
+            <p class="location">São Miguel dos Milagres | AL</p>
+        </div>
+    </section>
+
+    <!-- ============ HERO - PARTE 2 (mensagem e assinatura) ============ -->
+    <section class="hero-message">
+        <p class="message">Queridos familiares e amigos,</p>
+        <p class="message">Vocês são parte da nossa história e ter vocês por perto é o que faz esse momento ser tão especial.</p>
+        <p class="message">A presença de cada um de vocês é muito importante para nós!</p>
+        <p class="message">Esperamos vocês com muito amor, energia e alto astral!</p>
+        <p class="message">Com carinho,</p>
+        <p class="message">Helena e Rafael</p>
+        </section>   
+
+    <!-- ============ COUNTDOWN ============ -->
+    <section class="countdown-section">
+        <h3>Faltam</h3>
+        <div class="countdown">
+            <div class="countdown-item">
+                <span class="number" id="dias">00</span>
+                <span class="label">dias</span>
+            </div>
+            <div class="countdown-item">
+                <span class="number" id="horas">00</span>
+                <span class="label">horas</span>
+            </div>
+            <div class="countdown-item">
+                <span class="number" id="minutos">00</span>
+                <span class="label">min</span>
+            </div>
+            <div class="countdown-item">
+                <span class="number" id="segundos">00</span>
+                <span class="label">seg</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ PROGRAMAÇÃO ============ -->
+    <section class="programacao" id="programacao">
+        <div class="program-timeline">
+            <!-- Título dentro do bloco branco, mas FORA do wrapper da linha -->
+            <h2 class="section-title">Programação</h2>
+
+            <!-- Wrapper só com os itens (a linha vai aparecer só aqui) -->
+            <div class="program-timeline-items">
+
+            <!-- Welcome Party (lado esquerdo) -->
+            <div class="program-item program-item-left">
+                <div class="program-dot"></div>
+                <div class="program-content">
+                    <h3>Welcome Party</h3>
+                    <p class="day">Quinta-feira</p>
+                    <p class="date-line">03.12.26</p>
+                    <p class="time">Às 18h00</p>
+                    <p class="place">
+                        <a href="https://www.google.com/maps/place/Casa+Orla+Milagres/@-9.3019633,-35.4002974,17z/data=!3m1!4b1!4m6!3m5!1s0x7011db2d9798e99:0x6739c3b76b0d1504!8m2!3d-9.3019633!4d-35.3977225!16s%2Fg%2F11p_82vdsp?entry=ttu&g_ep=EgoyMDI2MDUyNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">Casa Orla</a>
+                    </p>
+                    <p class="traje">Traje branco</p>
+                </div>
+            </div>
+
+            <!-- Beach day (lado direito) -->
+            <div class="program-item program-item-right">
+                <div class="program-dot"></div>
+                <div class="program-content">
+                    <h3>Day Off</h3>
+                    <p class="day">Sexta</p>
+                    <p class="date-line">04.12.26</p>
+                    <p class="traje">Fiquem à vontade para conhecer Milagres! <br>
+                        <br> 
+                        Caso queiram passar o dia com os noivos, estaremos na praia/piscina da<strong> Casa Orla a partir das 14h</strong></p>
+
+                </div>
+            </div>
+
+            <!-- Casamento (lado esquerdo) -->
+            <div class="program-item program-item-left">
+                <div class="program-dot"></div>
+                <div class="program-content">
+                    <h3>Casamento</h3>
+                    <p class="day">Sábado</p>
+                    <p class="date-line">05.12.26</p>
+                    <p class="time">Às 15h30</p>
+                    <p class="place">
+                        <a href="https://www.google.com/maps/place/Capela+dos+Milagres+-+Santu%C3%A1rio+dos+Milagres/@-9.2875864,-35.3910758,17z/data=!3m1!4b1!4m6!3m5!1s0x700fd5402b0185b:0x55d7888d575e5de3!8m2!3d-9.2875864!4d-35.3885009!16s%2Fg%2F11c75x4d78?entry=ttu&g_ep=EgoyMDI2MDUyNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">Capela dos Milagres</a>
+                    </p>
+                    <p class="traje">
+                        Traje Esporte Fino<br>
+                        Homens: dispensável o uso de gravata<br>
+                        Mulheres: não recomendamos salto fino
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        </div>
+    </section>
+
+    <!-- ============ COMO CHEGAR ============ -->
+    <section class="como-chegar" id="como-chegar">
+        <h2 class="section-title">Como chegar</h2>
+        <div class="como-chegar-content">
+            <div class="como-chegar-text">
+                <p>O aeroporto mais próximo é o de Maceió, o Zumbi dos Palmares.<br> Distância até Milagres: 100 km (aproximadamente 1h30)</p>
+                <p>Também é possível ir pelo aeroporto de Recife, o Gilberto Freyre.<br> Distância até Milagres: 200km (aproximadamente 3h00)</p>
+                <p>É possível alugar carro no próprio aeroporto ou contratar um serviço de transfer <br> Confira abaixo algumas indicações</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ HOSPEDAGEM ============ -->
+    <section class="hospedagem" id="hospedagem">
+        <h2 class="section-title">Hospedagem</h2>
+
+        <div class="hospedagem-content">
+
+            <!-- Grupo 1: 4 coqueiros + primeira lista -->
+            <div class="hospedagem-grupo">
+                <div class="coqueiros-fila">
+                    <img src="img/mini_coqueiro.avif" alt="Coqueiro">
+                    <img src="img/mini_coqueiro.avif" alt="Coqueiro">
+                    <img src="img/mini_coqueiro.avif" alt="Coqueiro">
+                    <img src="img/mini_coqueiro.avif" alt="Coqueiro">
+                </div>
+                
+                <ul class="hospedagem-lista">
+                    <li>
+                        <a href="https://www.booking.com/hotel/br/pousada-haya.html" target="_blank" rel="noopener noreferrer">Pousada Haya</a>  
+                            <span class="van-icon" title="Van disponível para o casamento">
+                                <img src="img/van.png" alt="Van disponível">
+                            </span>
+                    </li>
+                    
+                    <li><a href="https://www.booking.com/hotel/br/villas-do-paru-praia-de-marceneiro.html" target="_blank" rel="noopener noreferrer">Paru Boutique Hotel</a> 
+                            <span class="van-icon" title="Van disponível para o casamento">
+                                <img src="img/van.png" alt="Van disponível">
+                            </span>
+                    </li>
+                    
+                    <li><a href="https://www.booking.com/hotel/br/mahre-amp-spa.pt-br.html" target="_blank" rel="noopener noreferrer">Mahré Hotel</a></li> 
+                    <li><a href="https://www.booking.com/hotel/br/villas-tatura-c.pt-br.html" target="_blank" rel="noopener noreferrer">Villas Taturé</a></li> 
+                
+                </ul>
+            </div>
+
+            <!-- Grupo 2: 3 coqueiros + segunda lista -->
+            <div class="hospedagem-grupo">
+                <div class="coqueiros-fila">
+                    <img src="img/mini_coqueiro.avif" alt="Coqueiro">
+                    <img src="img/mini_coqueiro.avif" alt="Coqueiro">
+                    <img src="img/mini_coqueiro.avif" alt="Coqueiro">
+                </div>
+                
+                <ul class="hospedagem-lista">
+                    <li><a href="https://www.booking.com/hotel/br/taboo-milagres-sao-miguel-dos-milagres.html" target="_blank" rel="noopener noreferrer">Taboo</a> 
+                            <span class="van-icon" title="Van disponível para o casamento">
+                                <img src="img/van.png" alt="Van disponível">
+                            </span>
+                    </li>
+                                        
+                    <li><a href="https://www.booking.com/hotel/br/pousada-marceneiro.pt-br.html" target="_blank" rel="noopener noreferrer">Pousada Marceneiro</a>
+                            <span class="van-icon" title="Van disponível para o casamento">
+                                <img src="img/van.png" alt="Van disponível">
+                            </span>
+                    </li>
+                     
+                    <li><a href="https://www.booking.com/hotel/br/pousada-zaya-sao-miguel-dos-milagres.pt-br.html" target="_blank" rel="noopener noreferrer">Pousada Zaya</a></li>                     
+                    <li><a href="https://www.booking.com/hotel/br/wassu-pousada.pt-br.html" target="_blank" rel="noopener noreferrer">Wassu Pousada</a></li>
+                </ul>
+            </div>
+
+            <!-- Grupo 3: 2 coqueiros + terceira lista -->
+            <div class="hospedagem-grupo">
+                <div class="coqueiros-fila">
+                    <img src="img/mini_coqueiro.avif" alt="Coqueiro">
+                    <img src="img/mini_coqueiro.avif" alt="Coqueiro">
+                </div>
+                
+                <ul class="hospedagem-lista">
+                    <li><a href="https://www.booking.com/hotel/br/pousada-o-casarapso-passo-de-camaragibe.html" target="_blank" rel="noopener noreferrer">O Casarão</a> 
+                            <span class="van-icon" title="Van disponível para o casamento">
+                                <img src="img/van.png" alt="Van disponível">
+                            </span>
+                    </li>
+                    
+                    <li><a href="https://www.booking.com/hotel/br/naim-studios-milagres.html" target="_blank" rel="noopener noreferrer">Naim Studios</a>
+                            <span class="van-icon" title="Van disponível para o casamento">
+                                <img src="img/van.png" alt="Van disponível">
+                            </span>
+                    </li>
+                     
+                    <li><a href="https://www.booking.com/hotel/br/kacua-milagres.html" target="_blank" rel="noopener noreferrer">Pousada Kaçua</a></li> 
+                    <li><a href="https://www.booking.com/hotel/br/pousada-riacho-dos-milagres.html" target="_blank" rel="noopener noreferrer">Pousada Riacho dos Milagres</a></li> 
+                    <li><a href="https://www.booking.com/hotel/br/pousada-divino-milagre.html" target="_blank" rel="noopener noreferrer">Pousada Divino Milagre</a></li>
+                </ul>
+            </div>
+
+            <!-- Grupo 4: 1 coqueiro + quarta lista -->
+            <div class="hospedagem-grupo">
+                <div class="coqueiros-fila">
+                    <img src="img/mini_coqueiro.avif" alt="Coqueiro">
+                </div>
+                
+                <ul class="hospedagem-lista">
+                    <li><a href="https://www.booking.com/hotel/br/suite-corais-dos-milagres.htmll" target="_blank" rel="noopener noreferrer">Corais dos Milagres</a>
+                            <span class="van-icon" title="Van disponível para o casamento">
+                                <img src="img/van.png" alt="Van disponível">
+                            </span>
+                    </li>
+                    
+                    <li><a href="https://www.booking.com/hotel/br/natu-boutique-stays.html" target="_blank" rel="noopener noreferrer">Natu</a>
+                            <span class="van-icon" title="Van disponível para o casamento">
+                                <img src="img/van.png" alt="Van disponível">
+                            </span>
+                    </li>
+                     
+                    <li><a href="https://www.booking.com/hotel/br/vila-hayo.html" target="_blank" rel="noopener noreferrer">Vila Hayo</a></li> 
+                    <li><a href="https://www.booking.com/hotel/br/villa-marceneiro-beach.html" target="_blank" rel="noopener noreferrer">Villa Marceneiro</a></li>             
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Legenda da van -->
+        <p class="hospedagem-legenda">
+            <span class="van-icon">
+                <img src="img/van.png" alt="Van disponível">
+            </span>
+            Hotéis com van disponível para o transporte ao casamento (05.12)
+        </p>
+    
+    </section>
+
+    <!-- ============ DICAS ============ -->
+    <section class="dicas" id="dicas">
+        <div class="dicas-container">
+            <h2 class="section-title">Dicas</h2>
+
+            <div class="dicas-grid">
+                <a href="salao-de-beleza.html" class="dica-card-link">
+                    <div class="dica-card">
+                        <div class="dica-card-icon">
+                            <img src="img/salao_beleza.png" alt="Salão de Beleza">
+                        </div>
+                        <p class="dica-card-label">Salão de Beleza</p>
+                    </div>
+                </a>
+
+                <a href="restaurantes.html" class="dica-card-link">
+                    <div class="dica-card">
+                        <div class="dica-card-icon">
+                            <img src="img/restaurante.png" alt="Restaurantes">
+                        </div>
+                        <p class="dica-card-label">Restaurantes</p>
+                    </div>
+                </a>
+
+                <a href="passeios.html" class="dica-card-link">
+                    <div class="dica-card">
+                        <div class="dica-card-icon">
+                            <img src="img/passeiospng.png" alt="Passeios">
+                        </div>
+                        <p class="dica-card-label">Passeios</p>
+                    </div>
+                </a>
+
+                <a href="transporte.html" class="dica-card-link">
+                    <div class="dica-card">
+                        <div class="dica-card-icon">
+                            <img src="img/taxi.png" alt="Transporte">
+                        </div>
+                        <p class="dica-card-label">Transporte</p>
+                    </div>
+                </a>
+                    
+            </div>
+        </div>
+    </section>    
+
+
+    <!-- ============ PRESENTES ============ -->
+
+    <section class="presentes" id="presentes">
+        <h2 class="section-title">Presentes</h2>
+
+        <!-- Texto introdutório -->
+        <p class="presentes-intro">
+            A sua presença é o maior presente que podemos receber, mas caso queira nos presentear,
+            preparamos uma lista de presentes com carinho!
+        </p>
+
+    <!-- Botão único e discreto -->
+    <div class="presentes-blocos">
+        <a href="#" target="_blank" rel="noopener noreferrer" class="presentes-bloco">
+            <strong>Lista de Presentes</strong>
+        </a>
+    </div>
+
+        <!-- Texto final com endereço -->
+        <div class="presentes-endereco">
+            <p>Endereço dos Noivos 
+            <p>Alameda Franca, 753, Apt 21 - São Paulo - SP</p>
+        </div>
+
+    </section>
+
+    
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer-fim">
+    <p>Esperamos vocês em Milagres!</p>
+    <p class="footer-credito">Helena & Rafael · 05.12.2026</p>
+    </footer>
+
+    <!-- ============ SCRIPT DO CONTADOR ============ -->
+    <script src="script.js"></script>    
+
+</body>
+</html>

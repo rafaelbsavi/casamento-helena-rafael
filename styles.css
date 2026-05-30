@@ -1,0 +1,949 @@
+/* ============================================================
+   SITE CASAMENTO - HELENA E RAFAEL
+   styles.css
+   ============================================================
+   ORGANIZAÇÃO DO ARQUIVO:
+     1. Reset e variáveis globais (cores)
+     2. Estilos base do body
+     3. Navbar
+     4. Estilos compartilhados de seções
+     5. Hero (capa principal)
+     6. Countdown (contagem regressiva)
+     7. Programação
+     8. Como Chegar
+     9. Hospedagem
+    10. Dicas
+    11. Contato
+    12. Presentes
+    13. Footer
+    14. Responsividade (mobile)
+
+   DICA: para mudar as cores do site inteiro, altere apenas
+   os valores das variáveis em :root (seção 1).
+   ============================================================ */
+
+
+/* ============================================================
+   1. RESET E VARIÁVEIS GLOBAIS
+   ============================================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-cream: #f3ede1;          /* fundo creme/bege claro de papel */
+    --bg-cream-dark: #ebe3d2;     /* fundo um pouco mais escuro (alternância de seções) */
+    --text-green: #4a5a3a;        /* verde musgo escuro - cor principal de texto */
+    --text-green-dark: #3a4a2c;   /* verde mais escuro - títulos */
+    --accent-green: #6b7a4a;
+    --link-color: #5a6a3a;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* ============================================================
+   2. ESTILOS BASE
+   ============================================================ */
+body {
+    font-family: 'Cormorant SC', 'Georgia', serif;  
+    background-color: var(--bg-cream);
+    color: var(--text-green);
+    line-height: 1.6;
+    letter-spacing: 1.5px;  /* ← adicione esta linha para o espaçamento característico */
+    overflow-x: hidden;
+}
+
+/* ============================================================
+   3. NAVBAR
+   ============================================================ */
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: var(--bg-cream);
+    border-bottom: 1px solid rgba(74, 90, 58, 0.15);
+    z-index: 1000;
+    padding: 18px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+}
+
+.navbar ul li a {
+    color: var(--text-green);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    text-transform: lowercase;
+    font-family: 'Cormorant SC', 'Georgia', serif; 
+    transition: opacity 0.2s;
+}
+
+.navbar ul li a:hover {
+    opacity: 0.6;
+}
+
+
+/* ============================================================
+   4. ESTILOS COMPARTILHADOS DE SEÇÕES
+   ============================================================ */
+section {
+    padding: 80px 40px;
+    position: relative;
+}
+
+.section-title {
+    font-family: 'Cormorant SC', 'Georgia', serif; 
+    font-size: 40px;
+    color: var(--text-green-dark);
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 50px;
+    line-height: 1;
+    letter-spacing: 5px;
+}
+
+/* ============================================================
+   5. HERO - PARTE 1 (BANNER COM IMAGEM DE FUNDO)
+   ============================================================ */
+  .hero-banner {
+    background-image: url('img_fundo_identidade_visual.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* Altura total: ajuste conforme quiser */
+    min-height: 100vh;
+
+    /* Centraliza o overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Espaço em cima e embaixo (mostra parte da imagem) */
+    padding: 120px 20px;
+}
+
+.hero-banner-overlay {
+    background-color: rgba(243, 237, 225, 0.75);  /* creme com 75% de opacidade */
+    backdrop-filter: blur(2px);                    /* leve desfoque atrás (opcional) */
+    padding: 60px 80px;
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.hero-banner-overlay h1 {
+    font-family: 'Cormorant SC', 'Georgia', serif;
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 400;
+    color: var(--text-green-dark);
+    line-height: 1.1;
+    margin-bottom: 30px;
+    letter-spacing: 3px;
+}
+
+.hero-banner-overlay .date {
+    font-family: 'Cormorant SC', 'Georgia', serif;
+    font-size: 22px;
+    color: var(--text-green);
+    margin-bottom: 8px;
+    letter-spacing: 2px;
+}
+
+.hero-banner-overlay .location {
+    font-family: 'Cormorant SC', 'Georgia', serif;
+    font-size: 20px;
+    color: var(--text-green);
+    letter-spacing: 2px;
+}
+
+
+/* ============================================================
+   5b. HERO - PARTE 2 (MENSAGEM NO CORPO DO SITE)
+   ============================================================ */
+.hero-message {
+    background-color: var(--bg-cream);
+    padding: 80px 20px 30px 20px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.hero-message .message {
+    font-family: 'Cormorant SC', 'Georgia', serif;
+    font-size: 18px;
+    color: var(--text-green);
+    line-height: 1.9;
+    margin-bottom: 18px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-style: normal;  /* removido o italic, pois Cormorant SC já tem visual próprio */
+}
+
+.hero-message .signature {
+    font-family: 'Cormorant Garamond', 'Georgia', serif;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--text-green-dark);
+    margin-top: 25px;
+    letter-spacing: 1px;
+}
+
+/* Coqueiro decorativo */
+.coqueiro {
+    position: absolute;
+    right: 5%;
+    bottom: 0;
+    width: 166px;
+    height: auto;
+    opacity: 0.9;
+}
+
+/* ============================================================
+   6. COUNTDOWN (CONTAGEM REGRESSIVA)
+   ============================================================ */
+.countdown-section {
+    text-align: center;
+    padding: 20px 40px 40px;
+    background-color: var(--bg-cream);
+}
+
+.countdown-section h3 {
+    font-family: 'Cormorant SC', 'Georgia', serif;
+    font-size: 30px;
+    color: var(--text-green-dark);
+    font-weight: 400;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.countdown-item {
+    text-align: center;
+}
+
+.countdown-item .number {
+    font-family: 'Cormorant SC', 'Georgia', serif;
+    font-size: 30px;
+    color: var(--text-green-dark);
+    font-weight: 300;
+    display: block;
+    letter-spacing: 1px;
+}
+
+.countdown-item .label {
+    font-family: 'Cormorant SC', 'Georgia', serif;
+    font-size: 15px;
+    color: var(--text-green);
+    text-transform: lowercase;
+    letter-spacing: 2px;
+}
+
+
+/* ============================================================
+   7. PROGRAMAÇÃO
+   ============================================================ */
+.programacao {
+    background-color: var(--bg-cream);  /* ← agora usa o fundo creme do site */
+    padding: 80px 40px;                  /* espaço externo (fora do retângulo branco) */
+    position: relative;
+}
+
+/* Container da timeline */
+.program-timeline {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    padding: 60px 40px;
+    background-color: #faf7ef;
+    border-radius: 4px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Wrapper que contém só os itens da timeline (não o título) */
+.program-timeline-items {
+    position: relative;
+}
+
+/* Linha vertical: começa na primeira bolinha e termina na última */
+.program-timeline-items::before {
+    content: "";
+    position: absolute;
+    top: 50px;        /* alinha com o topo da primeira bolinha */
+    bottom: 50px;     /* termina antes do fim do último item (alinhado com a última bolinha) */
+    left: 50%;
+    width: 1px;
+    background-color: rgba(107, 122, 74, 0.4);
+    transform: translateX(-50%);
+}
+
+/* Linha vertical central */
+.timeline-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background-color: rgba(107, 122, 74, 0.4);
+    transform: translateX(-50%);
+    display: none;
+}
+
+/* Item de programa (cada evento) */
+.program-item {
+    position: relative;
+    width: 50%;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+/* Item à esquerda */
+.program-item-left {
+    margin-right: auto;
+    text-align: right;
+    padding-right: 60px;
+}
+
+/* Item à direita */
+.program-item-right {
+    margin-left: 50%;
+    text-align: left;
+    padding-left: 60px;
+    margin-top: -40px;  /* aproxima do item anterior */
+}
+
+/* Bolinha (ponto na linha) */
+.program-dot {
+    position: absolute;
+    top: 50px;
+    width: 15px;
+    height: 15px;
+    background-color: var(--text-green);
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.program-item-left .program-dot {
+    right: -7.5px;  /* posiciona em cima da linha (lado direito do item esquerdo) */
+}
+
+.program-item-right .program-dot {
+    left: -7.5px;  /* posiciona em cima da linha (lado esquerdo do item direito) */
+}
+
+/* Conteúdo de cada evento */
+.program-content h3 {
+    font-family: 'Cormorant SC', 'Georgia', serif;
+    font-size: 25px;
+    color: var(--text-green-dark);
+    font-weight: 500;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.program-content .day,
+.program-content .date-line,
+.program-content .time {
+    font-family: 'Cormorant SC', 'Georgia', serif;
+    font-size: 18px;
+    color: var(--text-green);
+    margin-bottom: 0px;
+    letter-spacing: 1px;
+}
+
+.program-content .date-line {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.program-content .place {
+    font-family: 'Cormorant SC', 'Georgia', serif;
+    font-size: 20px;
+    color: var(--text-green-dark);
+    margin: 18px 0;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+/* Link discreto no nome do local */
+.program-content .place a {
+    color: inherit;                    /* herda a cor verde escura do <p> */
+    text-decoration: none;             /* sem sublinhado por padrão */
+    border-bottom: 1px solid rgba(74, 90, 58, 0.3);  /* linha fina e sutil */
+    padding-bottom: 2px;
+    transition: border-color 0.2s, opacity 0.2s;
+}
+
+.program-content .place a:hover {
+    border-bottom-color: var(--text-green);  /* linha fica mais visível */
+    opacity: 0.8;
+}
+
+.program-content .place a:visited {
+    color: inherit;                    /* mantém a cor mesmo após visitar */
+}
+
+.program-content .traje {
+    font-family: 'Cormorant SC', 'Georgia', serif;
+    font-size: 15px;
+    color: var(--text-green);
+    line-height: 1.5;
+    letter-spacing: 1px;
+    margin-top: 20px;
+}
+
+
+/* ============================================================
+   7b. PROGRAMAÇÃO - RESPONSIVO (mobile)
+   ============================================================ */
+@media (max-width: 700px) {
+    .timeline-line {
+        left: 30px;  /* linha sai do meio e vai para a esquerda */
+    }
+
+    .program-item {
+        width: 100%;
+        margin: 0 0 30px 0 !important;
+        padding-left: 60px !important;
+        padding-right: 20px !important;
+        text-align: left !important;
+    }
+
+    .program-item-left .program-dot,
+    .program-item-right .program-dot {
+        left: 25px;
+        right: auto;
+    }
+
+    .program-item-left .program-icon,
+    .program-item-right .program-icon {
+        justify-content: flex-start;
+    }
+}
+
+
+/* ============================================================
+   8. COMO CHEGAR
+   ============================================================ */
+.como-chegar {
+    background-color: var(--bg-cream);
+    padding: 90px 40px;
+}
+
+.como-chegar-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.como-chegar-text p {
+    font-family: 'Cormorant SC', 'Georgia', serif;
+    letter-spacing: 1.5px;
+    font-size: 18px;
+    color: var(--text-green);
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+
+/* ============================================================
+   9. HOSPEDAGEM
+   ============================================================ */
+.hospedagem {
+    background-color: var(--bg-cream);
+    padding: 90px 40px;
+    position: relative;
+}
+
+/* Container principal: tudo centralizado em uma coluna */
+.hospedagem-content {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Cada grupo (coqueiros + lista) */
+.hospedagem-grupo {
+    margin-bottom: 60px;  /* espaço entre os grupos */
+}
+
+.hospedagem-grupo:last-child {
+    margin-bottom: 0;
+}
+
+/* Fila de mini coqueiros */
+.coqueiros-fila {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 4px;
+    margin-bottom: 30px;
+}
+
+.coqueiros-fila img {
+    height: 40px;        /* tamanho de cada coqueiro - ajuste se necessário */
+    width: auto;
+}
+
+/* Lista de pousadas */
+.hospedagem-lista {
+    list-style: none;
+    padding: 0;
+}
+
+.hospedagem-lista li {
+    margin-bottom: 10px;
+}
+
+/* Estilo do link (texto da pousada) */
+.hospedagem-lista li a {
+    font-family: 'Cormorant SC', 'Georgia', serif;
+    font-size: 18px;
+    color: var(--text-green-dark);       /* ← cor verde do site, não azul */
+    letter-spacing: 2px;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 1px;
+    text-decoration-color: var(--text-green);
+    transition: opacity 0.2s;            /* efeito suave no hover */
+}
+
+/* Hover (quando passar o mouse) */
+.hospedagem-lista li a:hover {
+    opacity: 0.6;                        /* fica levemente desbotado */
+}
+
+/* Cores em outros estados (visited = já visitado, active = clicando agora) */
+.hospedagem-lista li a:visited {
+    color: var(--text-green-dark);       /* mantém a cor verde mesmo após visitar */
+}
+
+.hospedagem-lista li a:active {
+    color: var(--text-green-dark);       /* mantém a cor verde ao clicar */
+}
+
+
+/* Ícone de van ao lado do nome do hotel */
+.van-icon {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-left: 8px;
+    color: var(--text-green);    /* herdada pelo SVG */
+    vertical-align: -8px;        /* alinha melhor com a linha de texto */
+    opacity: 0.75;               /* deixa mais sutil */
+}
+
+.van-icon img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;   /* mantém proporção da imagem */
+}
+
+/* Legenda da van no rodapé da seção */
+.hospedagem-legenda {
+    font-family: 'Cormorant SC', 'Georgia', serif;
+    font-size: 13px;
+    color: var(--text-green);
+    letter-spacing: 1.5px;
+    text-align: center;
+    margin-top: 60px;
+    font-style: italic;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.hospedagem-legenda .van-icon {
+    margin-left: 0;
+    margin-right: 6px;
+    opacity: 1;
+    vertical-align: px;
+    width: 25px;
+    height: 25px;
+}
+
+
+/* ============================================================
+   10. DICAS
+   ============================================================ */
+.dicas {
+    background-color: var(--bg-cream);   /* fundo creme do site */
+    padding: 80px 40px;
+    position: relative;
+}
+
+/* Bloco branco central (igual ao .program-timeline) */
+.dicas-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 40px;
+    background-color: #faf7ef;
+    border-radius: 4px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Container dos cards (flexbox em vez de grid) */
+.dicas-grid {
+    display: flex;
+    flex-wrap: wrap;             /* permite que os cards quebrem para a próxima linha */
+    justify-content: center;     /* centraliza os cards em cada linha */
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Cada card individual */
+.dica-card {
+    width: 180px;
+    height: 180px;
+    border: 1.5px solid rgba(107, 122, 74, 0.4);  /* borda fina verde */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 15px;
+    background-color: #faf7ef;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.dica-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.dica-card-link:hover .dica-card {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.dica-card-link:visited {
+    color: inherit;
+}
+
+/* Ícone do card */
+.dica-card-icon {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.dica-card-icon img {
+    max-width: 80px;
+    max-height: 80px;
+    width: auto;
+    height: auto;
+}
+
+/* Label embaixo do card */
+.dica-card-label {
+    font-family: 'Cormorant SC', 'Georgia', serif;
+    font-size: 16px;
+    color: var(--text-green-dark);
+    letter-spacing: 2px;
+    text-align: center;
+    margin: 0;
+}
+
+
+
+
+/* ============================================================
+   12. PRESENTES
+   ============================================================ */
+.presentes {
+    background-color: var(--bg-cream);   /* ← mudou: agora é igual ao resto do site */
+    padding: 90px 40px;
+    text-align: center;
+}
+
+/* Texto introdutório */
+.presentes-intro {
+    font-family: 'Cormorant SC', 'Georgia', serif;
+    font-size: 16px;
+    color: var(--text-green);
+    line-height: 1.9;
+    letter-spacing: 1.5px;
+    max-width: 650px;
+    margin: 0 auto 50px auto;
+}
+
+/* Container do botão */
+.presentes-blocos {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+/* Botão único e discreto */
+.presentes-bloco {
+    display: inline-block;
+    font-family: 'Cormorant SC', 'Georgia', serif;
+    font-size: 14px;
+    color: var(--text-green-dark);
+    letter-spacing: 3px;
+    text-decoration: none;
+    padding: 12px 30px;
+    border: 1px solid var(--text-green);
+    border-radius: 2px;
+    background-color: transparent;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.presentes-bloco:hover {
+    background-color: var(--text-green-dark);
+    color: var(--bg-cream);
+}
+
+.presentes-bloco:visited {
+    color: var(--text-green-dark);
+}
+
+.presentes-bloco:visited:hover {
+    color: var(--bg-cream);
+}
+
+/* Endereço no final */
+.presentes-endereco {
+    margin-top: 70px;
+    font-family: 'Cormorant SC', 'Georgia', serif;
+    color: var(--text-green);
+    letter-spacing: 1.5px;
+    line-height: 1.9;
+}
+
+.presentes-endereco p {
+    font-size: 15px;
+    margin: 4px 0;
+}
+
+
+
+/* ============================================================
+   13. FOOTER
+   ============================================================ */
+.footer-fim {
+    background-color: var(--bg-cream-dark);   /* ← mudou (era var(--bg-cream)) */
+    border-top: 1px solid rgba(74, 90, 58, 0.15);
+    text-align: center;
+    padding: 15px 15px;
+}
+
+.footer-fim p {
+    font-family: 'Cormorant SC', 'Georgia', serif;
+    font-size: 16px;
+    color: var(--text-green-dark);
+    letter-spacing: 2px;
+    margin: 6px 0;
+}
+
+.footer-fim .footer-credito {
+    font-size: 14px;
+    opacity: 0.7;
+}    
+
+
+/* ============================================================
+   15. PÁGINAS INTERNAS (Salão, Restaurantes, Passeios, Transporte)
+   ============================================================ */
+.pagina-interna {
+    background-color: var(--bg-cream);
+    padding: 80px 40px;
+    min-height: 70vh;
+}
+
+.pagina-interna-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px 40px;
+    background-color: #faf7ef;
+    border-radius: 4px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+/* Ícones decorativos no topo da página */
+.pagina-interna-icones {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 8px;
+    margin: 30px 0 50px 0;
+}
+
+.pagina-interna-icones img {
+    max-height: 80px;
+    width: auto;
+}
+
+/* Conteúdo */
+.pagina-interna-conteudo {
+    margin-top: 30px;
+}
+
+/* Título de cada cidade (Milagres, Maceió) */
+.cidade-titulo {
+    font-family: 'Cormorant SC', 'Georgia', serif;  /* ← mudou */
+    font-size: 24px;                                  /* ← mudou (era 50px) */
+    color: var(--text-green-dark);
+    font-weight: 900;                                 /* ← mudou (era 400) */
+    letter-spacing: 3px;                              /* ← novo */
+    margin: 50px 0 30px 0;
+    line-height: 1;
+}
+
+.cidade-titulo:first-child {
+    margin-top: 0;
+}
+
+/* Cada salão individual */
+.salao-item {
+    margin-bottom: 30px;
+}
+
+.salao-nome {
+    font-family: 'Cormorant SC', 'Georgia', serif;
+    font-size: 18px;
+    color: var(--text-green-dark);
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.salao-contato {
+    font-family: 'Cormorant SC', 'Georgia', serif;
+    font-size: 14px;
+    color: var(--text-green);
+    letter-spacing: 1.5px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* Links dos contatos (Instagram, WhatsApp) */
+.salao-contato a {
+    color: var(--text-green-dark);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+    text-decoration-color: var(--text-green);
+    transition: opacity 0.2s;
+}
+
+.salao-contato a:visited {
+    color: var(--text-green-dark);
+}
+
+.salao-contato a:hover {
+    opacity: 0.6;
+}
+
+/* Texto de introdução no topo da página */
+.intro-texto {
+    font-family: 'Cormorant SC', 'Georgia', serif;
+    font-size: 16px;
+    color: var(--text-green);
+    line-height: 1.9;
+    letter-spacing: 1.5px;
+    text-align: center;
+    margin: 0 auto 40px auto;
+    max-width: 650px;
+    font-style: normal;
+}
+
+/* Descrição de cada estabelecimento */
+.salao-descricao {
+    font-family: 'Cormorant SC', 'Georgia', serif;
+    font-size: 14px;
+    color: var(--text-green);
+    line-height: 1.8;
+    letter-spacing: 1px;
+    margin: 8px auto 10px auto;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Texto de observação (ex: "necessário reservar") */
+.obs {
+    font-family: 'Cormorant SC', 'Georgia', serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--text-green);
+    letter-spacing: 1.5px;
+    font-style: italic;
+}
+
+/* Subtítulo dentro de um item (ex: "Para contratar:") */
+.salao-subnome {
+    font-family: 'Cormorant SC', 'Georgia', serif;
+    font-size: 13px;
+    font-style: italic;
+    color: var(--text-green);
+    letter-spacing: 1.5px;
+    margin: 12px 0 6px 0;
+    text-align: center;
+}
+
+/* Imagem decorativa no final da página */
+.pagina-interna-imagem-final {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.pagina-interna-imagem-final img {
+    max-width: 200px;     /* tamanho máximo - ajuste como quiser */
+    height: auto;
+}
+
+/* Link de voltar */
+.voltar-link {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.voltar-link a {
+    font-family: 'Cormorant SC', 'Georgia', serif;
+    font-size: 14px;
+    color: var(--text-green-dark);
+    text-decoration: none;
+    letter-spacing: 2px;
+    border-bottom: 1px solid var(--text-green);
+    padding-bottom: 4px;
+    transition: opacity 0.2s;
+}
+
+.voltar-link a:visited {
+    color: var(--text-green-dark);
+}
+
+.voltar-link a:hover {
+    opacity: 0.6;
+}
+
+
+
